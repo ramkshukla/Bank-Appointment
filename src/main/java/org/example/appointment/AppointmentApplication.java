@@ -1,5 +1,6 @@
 package org.example.appointment;
 
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AppointmentApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AppointmentApplication.class, args);
+		SpringApplication applicationContext = new  SpringApplication(AppointmentApplication.class);
+		applicationContext.setBannerMode(Banner.Mode.OFF);
+		applicationContext.run(args);
 	}
 
 }
